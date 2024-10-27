@@ -70,7 +70,6 @@ a {
     word-break: keep-all;
     word-wrap: normal;
     margin-top: 60px;
-
 }
 
 .link_button {
@@ -103,7 +102,6 @@ a {
     background-color: #F9F9F9;
     width: 1920px;
     height: 360px;
-
 }
 
 .middle_section__text_block--container {
@@ -153,7 +151,6 @@ h2, h3, p {
     display: flex;
     width: 142px;
     height: 50px;
-    
     margin-top: 104px;
     gap: 20px;
     color: white;
@@ -215,7 +212,7 @@ h2, h3, p {
     font-family: 'Roboto';
     font-size: 16px;
     font-weight: 400;
-    line-height: 28x;
+    line-height: 28px;
     text-align: center;
     width: 540px;
     height: 67px;
