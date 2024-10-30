@@ -9,6 +9,7 @@
     position: relative;
 }
 
+
 .header__container {
     display: flex;
     background-color: #EEEFF1;
@@ -17,6 +18,7 @@
     height: 700px;
 }
 
+
 .header__list_container {
     display: flex;
     gap: 42px;
@@ -24,6 +26,8 @@
     margin-top: 80px;
 }
 
+
+    
 .header__list--item {
     font-family: 'Roboto';
     font-size: 16px;
@@ -71,6 +75,8 @@ a {
     word-wrap: normal;
     margin-top: 60px;
 }
+
+
 
 .link_button {
     background-color: #34547A;
@@ -270,4 +276,88 @@ img {
     position: absolute;
     top: 1863px;
     left: 910px;
+}
+
+
+@media  (max-width: 767px) {
+    .header__list_container{
+    gap: 10 px;
+    margin-left: 20px; 
+
+}
+.wrapper {
+    max-width: 767px;
+    margin: 0 auto;
+}
+.header__container{
+    height: auto;
+}
+.header__text_block__container {
+    margin-left: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.middle_section--container {
+    max-width: 767px;
+    /* margin-top: 50px; */
+}
+.middle_section__text_block--container {
+    margin-left: 20px;
+}
+.middle_section__text_block--title {
+    text-align: left;
+}
+.middle_section__text_block--body {
+    text-align: left;
+}
+.blue_section--container {
+    max-width: 767px;
+    height: auto;
+    justify-content: center;
+    align-content: space-around;
+}
+.blue_section--aux {
+    margin-left: 0px;
+    flex-direction: column;
+    gap: 1px;
+    align-content: space-around;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.how_i_work_container {
+    max-width: 767px;
+    height: auto;
+}
+.how_i_work_text--title, .how_i_work_text--body {
+    margin-left: 20px;
+    text-align: left;
+}
+.how_i_work--yt_img {
+    max-width: 767px;
+    margin-left: 0px;
+}
+
+.blue_section__block {
+    display: flex;
+    width: 142px;
+    height: 50px;
+    margin-top: 50px;
+    gap: 20px;
+    color: white;
+}
+.footer_container {
+    display: flex;
+    background-color: #34547A;
+    max-width: 767px;
+    height: 152px;
+    justify-content: center;
+}
+.footer_container--aux {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 0px;
+    gap: 20px;
+}
 }
