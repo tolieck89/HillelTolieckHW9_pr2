@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+$main_font: 'Roboto';
+$main_font_size: 14px;
+$main_font_weight: 400;
+$text_color_one: white;
+$blue_color: #34547A;
+$header_background_color: #EEEFF1;
+$main_font_size16: 16px;
+$main_font_weight500: 500;
+$align_left: left;
+$background_color_gray: #727272;
+$middle_background: #F9F9F9;
+$margin_left_main: 20%;
+$mobile_margin_left: 5%;
+$mobile_width: 80%;
+$color_h1: black;
+
+@mixin main_font {
+    font-family: $main_font;
+    font-weight: $main_font_weight;
+    font-size: $main_font_size;
+    
+}
+
+@mixin main_font16 {
+    font-family: $main_font;
+    font-weight: $main_font_weight500;
+    font-size: $main_font_size16
+}
+
+@mixin main_font16_400 {
+    font-family: $main_font;
+    font-weight: $main_font_weight;
+    font-size: $main_font_size16;
+    line-height: 28px;
+}
