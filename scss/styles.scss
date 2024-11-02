@@ -1,4 +1,4 @@
-@import url(config.scss);
+@import "config.scss";
 
 .wrapper {
     max-width: 1300px;
@@ -38,15 +38,15 @@ ul {
     letter-spacing: 0.1em;
     text-align: $align_left;
     color: $blue_color;
+    a {
+        color: $blue_color;
+    }
 }
 
 a {
     text-decoration: none;
 }
 
-.header__list--item a {
-    color: $blue_color;
-}
 
 .header__text_block__container {
     display: flex;
@@ -89,14 +89,14 @@ a {
     width: 226px;
     height: 26px;
     margin-top: 66px;
+    a {
+        @include main_font16_400();
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: $text_color_one;
+    }
 }
 
-.link_button a {
-    @include main_font16_400();
-    letter-spacing: 0.1em;
-    text-align: center;
-    color: $text_color_one;
-}
 
 .middle_section--container {
     display: flex;
