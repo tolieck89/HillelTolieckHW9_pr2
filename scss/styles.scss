@@ -3,6 +3,42 @@
     src: url('fonts/Roboto.ttf');
 }
 
+$main_font: 'Roboto';
+$main_font_size: 14px;
+$main_font_weight: 400;
+$text_color_one: white;
+$blue_color: #34547A;
+$header_background_color: #EEEFF1;
+$main_font_size16: 16px;
+$main_font_weight500: 500;
+$align_left: left;
+$background_color_gray: #727272;
+$middle_background: #F9F9F9;
+$margin_left_main: 20%;
+$mobile_margin_left: 5%;
+$mobile_width: 80%;
+$color_h1: black;
+
+@mixin main_font {
+    font-family: $main_font;
+    font-weight: $main_font_weight;
+    font-size: $main_font_size;
+    
+}
+
+@mixin main_font16 {
+    font-family: $main_font;
+    font-weight: $main_font_weight500;
+    font-size: $main_font_size16
+}
+
+@mixin main_font16_400 {
+    font-family: $main_font;
+    font-weight: $main_font_weight;
+    font-size: $main_font_size16;
+    line-height: 28px;
+}
+
 .wrapper {
     max-width: 1300px;
     width: 80%;
@@ -11,12 +47,11 @@
 
 .header__container {
     display: flex;
-    background-color: #EEEFF1;
+    background-color: $header_background_color;
     margin-top: 0;
     flex-direction: column;
     height: 700px;
 }
-
 
 .header__list_container {
     display: flex;
@@ -37,13 +72,11 @@ ul {
 }
 
 .header__list--item {
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 500;
+   @include main_font16;
     line-height: 26px;
     letter-spacing: 0.1em;
-    text-align: left;
-    color: #34547A;
+    text-align: $align_left;
+    color: $blue_color;
 }
 
 a {
@@ -51,7 +84,7 @@ a {
 }
 
 .header__list--item a {
-    color: #34547A;
+    color: $blue_color;
 }
 
 .header__text_block__container {
@@ -63,32 +96,31 @@ a {
 }
 
 .header__text_block--title {
-    font-family: 'Roboto';
+    font-family: $main_font;
     font-size: 48px;
-    font-weight: 500;
+    font-weight: $main_font_weight500;
     line-height: 80px;
-    text-align: left;
+    text-align: $align_left;
 }
 
 .header__text_block--body {
-   font-family: 'Roboto';
+    @include main_font();
     font-size: 18px;
-    font-weight: 400;
     line-height: 28px;
-    text-align: left;
-    color: #727272;
+    text-align: $align_left;
+    color: $background_color_gray;
     width: 540px;
     height: 68px;
     word-break: keep-all;
     word-wrap: normal;
     margin-top: 60px;
-}
+ }
 
-.link_button {
-    background-color: #34547A;
-    color: white;
+ .link_button {
+    background-color: $blue_color;
+    color: $text_color_one;
     border-radius: 2px;
-    font-family: 'Roboto';
+    font-family: $main_font;
     padding: 20px 0; 
     display: flex;
     align-items: center;
@@ -99,19 +131,16 @@ a {
 }
 
 .link_button a {
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
+    @include main_font16_400();
     letter-spacing: 0.1em;
     text-align: center;
-    color: white;
+    color: $text_color_one;
 }
 
 .middle_section--container {
     display: flex;
     justify-content: left;
-    background-color: #F9F9F9;
+    background-color: $middle_background;
     max-width: 100%;
     height: 360px;
 }
@@ -124,23 +153,19 @@ a {
     gap: 3em;
     justify-items: center;
     margin-top: 112px;
-    margin-left: 20%;
+    margin-left: $margin_left_main;
 }
 
 .middle_section__text_block--title {
-    font-family: 'Roboto';
+    @include main_font16();
     font-size: 32px;
-    font-weight: 500;
     line-height: 38px;
 }
 
 .middle_section__text_block--body {
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    color: #727272;
-    text-align: left;
+    @include main_font16_400();
+    color: $background_color_gray;
+    text-align: $align_left;
 }
 
 h2, h3, p {
@@ -149,7 +174,7 @@ h2, h3, p {
 
 .blue_section--container {
     display: flex;
-    background-color: #34547A;
+    background-color: $blue_color;
     width: 100%;
     height: 250px;
 }
@@ -160,7 +185,7 @@ h2, h3, p {
     height: 50px;
     margin-top: 104px;
     gap: 1em;
-    color: white;
+    color: $text_color_one;
 }
 
 .blue_section__block--text_container{
@@ -170,63 +195,56 @@ h2, h3, p {
 }
 
 .blue_section__block--text--title {
-    font-family: 'Roboto';
+    @include main_font16();
     font-size: 21px;
-    font-weight: 500;
     line-height: 24px;
-    text-align: left;
+    text-align: $align_left;
 }
 
 .blue_section__block--text--body {
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 400;
+    @include main_font();
+    font-size: $main_font_size16;
     line-height: 26px;
-    text-align: left;
+    text-align: $align_left;
 }
 
 .blue_section--aux {
     display: flex;
     gap: 2em;
-    margin-left: 20%;
+    margin-left: $margin_left_main;
 }
 
 .how_i_work_container {
     width: 100%;
     height: auto;
     display: flex;
-    background-color: #EEEFF1;
+    background-color: $header_background_color;
     flex-direction: column;
 }
 
 .how_i_work_text--title {
+    @include main_font16();
     margin-top: 100px;
-    margin-left: 20%;
+    margin-left: $margin_left_main;
     width: 25%;
     height: 30px;
-    font-family: 'Roboto';
     font-size: 32px;
     line-height: 38px;
-    /* text-align: center; */
-    font-weight: 500;
 }
 
 .how_i_work_text--body {
+    @include main_font16_400();
     margin-top: 50px;
-    margin-left: 20%;
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
+    margin-left: $margin_left_main;
     text-align: center;
     width: 540px;
     height: 67px;
-    color: #727272;
+    color: $background_color_gray;
 }
 
 .how_i_work--yt_img {
     margin-top: 58px;
-    margin-left: 20%;
+    margin-left: $margin_left_main;
     max-width: 1110px;
     max-height: 600px;
 }
@@ -238,7 +256,7 @@ img {
 
 .footer_container {
     display: flex;
-    background-color: #34547A;
+    background-color: $blue_color;
     width: 100%;
     height: 152px;
     justify-content: center;
@@ -252,28 +270,18 @@ img {
 }
 
 .fio {
-    color: white;
-    font-family: 'Roboto';
+    color: $text_color_one;
+    @include main_font16();
     font-size: 22px;
-    font-weight: 500;
     line-height: 24px;
-    text-align: left;
+    text-align: $align_left;
 }
 
 .copyright {
-    color: white;
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 14px;
+    color: $text_color_one;
+   @include main_font();
     line-height: 22px;
 } 
-
-.play_button {
-    position: absolute;
-    top: 1863px;
-    left: 910px;
-}
-
 
 @media (max-width: 897px) and (orientation: landscape) {
     .wrapper {
@@ -281,10 +289,10 @@ img {
         max-width: 767px;
     }
     .header__list_container {
-        margin-left: 5%;
+        margin-left: $mobile_margin_left;
     }
     .middle_section__text_block--container {
-        width: 80%;
+        width: $mobile_width;
     }
     .middle_section--container {
         height: 300px;
@@ -309,17 +317,17 @@ img {
     }
     .header__container {
         height: auto;
+        
     }
 }
 
 @media  (max-width: 767px) and (min-width: 375px) and (orientation: portrait) {
     .wrapper {
         width: 90%;
-        /* padding: 0 10px;  */
     }
     .header__container {
         display: flex;
-        background-color: #EEEFF1;
+        background-color: $header_background_color;
         margin-top: 0;
         flex-direction: column;
         height: auto;
@@ -328,15 +336,15 @@ img {
     .header__text_block__container {
         width: 100%;
         margin-top: 2em;
-        margin-left: 5%;
+        margin-left: $mobile_margin_left;
     }
     .header__list_container {
         /* flex-direction: column; */
         flex-wrap: wrap;
-        width: 80%;
+        width: $mobile_width;
     }
     .header__text_block--title {
-        width: 80%;
+        width: $mobile_width;
         line-height: 50px;
     }
     .header__text_block--body {
@@ -349,7 +357,7 @@ img {
     .middle_section__text_block--container {
         width: 90%;
         margin-top: 2em;
-        margin-left: 5%;
+        margin-left: $mobile_margin_left;
         gap: 20px;
     }
     .middle_section--container {
@@ -358,7 +366,7 @@ img {
     }
     .blue_section--aux {
         flex-wrap: wrap;
-        margin-left: 5%;
+        margin-left: $mobile_margin_left;
     }
     .blue_section__block {
         margin-top: 1em;
@@ -370,13 +378,13 @@ img {
     .how_i_work_text--title {
         width: 100%;
         margin-top: 1em;
-        margin-left: 5%;
+        margin-left: $mobile_margin_left;
     }
     .how_i_work_text--body {
         width: 100%;
         margin-top: 1em;
         margin-left: 5%;
-        text-align: left;
+        text-align: $align_left;
     }
     [for=burger] {
         display: block;
@@ -392,7 +400,7 @@ img {
         top: 0;
         margin-top: 30px;
         width: 70%;
-        color: black;
+        color: $color_h1;
     }
     #burger:checked + label + ul{
         display: block;
